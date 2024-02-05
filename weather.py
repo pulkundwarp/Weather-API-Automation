@@ -24,6 +24,7 @@ else:
     print("An error occured")
 
 
+# Sample input/output    
 # > python weather.py
 # Enter a city name: paris
 # Enter a state code: tx
