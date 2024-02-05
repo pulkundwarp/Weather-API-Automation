@@ -5,7 +5,7 @@ import requests    # Request for getting some type of data
 API_KEY = "~insert your own Weather API Key~"
 BASE_URL = "http://api.openweathermap.org/data/2.5/weather"
 
-# If a combination of city and country code which does not exist, it will give an error message
+# If a combination of city and country code is entered which does not actually exist, it will give an error message
 city = input("Enter a city name: ")
 country = input("Enter a country code: ")
 
