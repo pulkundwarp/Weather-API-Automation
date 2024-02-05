@@ -5,11 +5,11 @@ import requests    # Request for getting some type of data
 API_KEY = "~insert your own Weather API Key~"
 BASE_URL = "http://api.openweathermap.org/data/2.5/weather"
 
+# If a combination of city and country code which does not exist, it will give an error message
 city = input("Enter a city name: ")
-state = input("Enter a state code: ")
 country = input("Enter a country code: ")
 
-request_url = f"{BASE_URL}?appid={API_KEY}&q={city},{state},{country}"
+request_url = f"{BASE_URL}?appid={API_KEY}&q={city},{country}"
 
 response = requests.get(request_url)
 
@@ -19,15 +19,14 @@ if response.status_code == 200:
     temperature = round(data['main']['temp'] - 273.15, 2)
     
     print("Weather: ", weather)
-    print("Temperature: ", temperature, " Degree Celsius")
+    print("Temperature: ", temperature, " Degree celsius")
 else:
     print("An error occured")
 
 
 # Sample input/output    
 # > python weather.py
-# Enter a city name: paris
-# Enter a state code: tx
-# Enter a country code: us
+# Enter a city name: Paris
+# Enter a country code: US
 # Weather:  overcast clouds
-# Temperature:  10.96  Degree Celsius
+# Temperature:  10.96  Degree celsius
